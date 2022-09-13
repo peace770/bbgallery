@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="request.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fullscreen centeredFlex wrap">
+       <div id="yearSelector" class="centeredFlex wrap">select year:
+        <select id="year">
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+        </select>
+        <button id="selectYearBT" onclick="render()">select</button>
+        <select id="pos">
+
+        </select>
+        <button id="selectPosBT" onclick="viewGallery()">submit</button>
+    </div>
+    <div class="container centeredFlex"></div>
+</body>
+</html>
+
+
+
