@@ -9,7 +9,7 @@
 });*/
 
 let container = document.querySelector(".container");
-let pos = document.querySelector("#pos");
+let select = document.querySelector("#pos");
 let playerList =[];
 render();
 
@@ -20,6 +20,7 @@ function render(){
 		playerList = res.data.league.standard;
         console.log(res);
 		let poslist = getUniqueValues(playerList, "pos");
+		console.log(poslist);
 		buildSelect(poslist, "#pos");
     })
     .catch((error) => {
@@ -34,14 +35,14 @@ const getUniqueValues =(list, key)=>{
 			arr.push(player[key]);
 		}
 	});
-	console.log(arr);
+	return arr;
 }
 
 const buildSelect =(list, parent) => {
     let select = document.querySelector(parent);
 	select.innerHTML = "";
-	list.forEach((Pos) =>{
-		let temp = buildelement("option", "positem", null, pos, null, select);
+	list.forEach((pos) =>{
+		let temp = buildElement("option", "positem", null, pos, null, select);
 		temp.value = pos;
 	})
 }

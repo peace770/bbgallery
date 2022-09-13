@@ -11,13 +11,13 @@
 </head>
 <body class="fullscreen centeredFlex wrap">
        <div id="yearSelector" class="centeredFlex wrap">select year:
-        <select id="year">
+        <select id="year" onchange="render()">
             <option value="2018">2018</option>
             <option value="2019">2019</option>
             <option value="2020">2020</option>
             <option value="2021">2021</option>
         </select>
-        <button id="selectYearBT" onclick="render()">select</button>
+        <!-- <button id="selectYearBT" onclick="render()">select</button> -->
         <select id="pos">
 
         </select>
